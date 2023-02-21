@@ -1,0 +1,28 @@
+[project]
+name = 'appening'
+dynamic = ['version']
+description = ''
+authors = [
+    { name = 'Omar', email = 'omar@atumm.org' },
+]
+dependencies = []
+requires-python = '>=3.9,<3.10'
+license = { text = 'BSD-3-Clause' }
+
+[project.optional-dependencies]
+dev = [
+    'mkdocs-material',
+    'mkdocstrings',
+    'mkdocstrings-python',
+    'mkdocs-git-revision-date-plugin',
+]
+
+[project.urls]
+Documentation = 'https://github.com/atumm-ra/appening#readme'
+Issues = 'https://github.com/atumm-ra/appening/issues'
+Source = 'https://github.com/atumm-ra/appening'
+
+[build-system]
+requires = ['pdm-pep517']
+build-backend = 'pdm.pep517.api'
+
