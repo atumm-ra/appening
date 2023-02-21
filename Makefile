@@ -5,6 +5,9 @@ help:
 	@echo "watch 	generate project using defaults and watch for changes"
 	@echo "replay 	replay last cookiecutter run and watch for changes"
 
+setup:
+	sudo apt-get install -y build-essential libc6 libc6-dev
+
 bake:
 	cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
 
@@ -14,3 +17,10 @@ watch: bake
 replay: BAKE_OPTIONS=--replay
 replay: watch
 	;
+
+
+
+run: bake
+	cd appening && \
+	pdm config python.use_venv true && \
+	pdm install && pdm run -v appening
