@@ -22,7 +22,7 @@ dev = [
     'mkdocstrings-python',
     'mkdocs-git-revision-date-plugin',
     'bump2version',
-    'pdm',
+    'pyinstaller'
 ]
 
 [project.urls]
@@ -30,9 +30,6 @@ Documentation = 'https://github.com/omars-code/appening#readme'
 Issues = 'https://github.com/omars-code/appening/issues'
 Source = 'https://github.com/omars-code/appening'
 
-
-[project.scripts]
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}.main"
 
 [tool.coverage.run]
 branch = true

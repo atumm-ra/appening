@@ -23,4 +23,4 @@ replay: watch
 run: bake
 	cd appening && \
 	pdm config python.use_venv true && \
-	pdm install && pdm run -v appening
+	pdm install -G dev && make run-bin
