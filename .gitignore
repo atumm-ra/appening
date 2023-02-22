@@ -3,12 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# project specific
+appening
+.pdm.toml
+__pypackages__
+
+٠
 # OSX useful to ignore
 *.DS_Store
 .AppleDouble
 .LSOverride
 
-.pdm.toml
 
 # Thumbnails
 ._*
