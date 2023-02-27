@@ -16,3 +16,8 @@ run-bin: compile
 
 shell:
 	eval $(pdm venv activate)
+
+flatrun:
+	flatpak-builder --force-clean --disable-cache build-dir {{cookiecutter.app_id}}.yml
+	flatpak-builder --user --install --force-clean build-dir {{cookiecutter.app_id}}.yml
+	flatpak run {{cookiecutter.app_id}}
