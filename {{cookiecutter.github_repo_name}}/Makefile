@@ -16,3 +16,8 @@ run-bin: compile
 
 shell:
 	eval $(pdm venv activate)
+
+flatrun:
+	flatpak-builder --force-clean --disable-cache build-dir org.atumm.appening_desktop.yml
+	flatpak-builder --user --install --force-clean build-dir org.atumm.appening_desktop.yml
+	flatpak run org.atumm.appening_desktop

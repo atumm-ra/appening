@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=0.4
+Type=Application
+
+Name={{cookiecutter.project_name}}
+Comment={{cookiecutter.project_short_description}}
+Categories=AudioVideo;Music;
+
+Icon=appening
+Exec=appening
+Terminal=false
