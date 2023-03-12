@@ -8,7 +8,10 @@ run:
 	pdm config python.use_venv true && \
 	pdm install && pdm run -v appening
 
-compile:
+install:
+	pdm install
+
+compile: install
 	pdm run pyinstaller --collect-all appening -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
 
 run-bin: compile
@@ -16,3 +19,8 @@ run-bin: compile
 
 shell:
 	eval $(pdm venv activate)
+
+flatrun:
+	flatpak-builder --force-clean --disable-cache build-dir {{cookiecutter.app_id}}.yml
+	flatpak-builder --user --install --force-clean build-dir {{cookiecutter.app_id}}.yml
+	flatpak run {{cookiecutter.app_id}}
