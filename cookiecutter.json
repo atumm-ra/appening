@@ -1,4 +1,5 @@
 {
+    "webapp_url": "https://atumm.org",
     "project_name": "Appening",
     "project_short_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
     "project_long_description": "{{ cookiecutter.project_name }}, Your favorite desktop app!",
@@ -8,7 +9,6 @@
     "app_screenshot_1": "",
     "app_screenshot_2": "",
     "app_screenshot_3": "",
-    "webapp_url": "https://atumm.org",
     "full_name": "First Last",
     "email": "admin@atumm.org",
     "github_username": "username",

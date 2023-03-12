@@ -8,7 +8,10 @@ run:
 	pdm config python.use_venv true && \
 	pdm install && pdm run -v appening
 
-compile:
+install:
+	pdm install
+
+compile: install
 	pdm run pyinstaller --collect-all appening -n {{cookiecutter.project_slug}} --onefile {{cookiecutter.project_slug}}/main.py
 
 run-bin: compile
